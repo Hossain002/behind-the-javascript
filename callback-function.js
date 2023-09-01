@@ -1,3 +1,8 @@
+//callback used to use in asynchonous operation now days we can use promise rather then callback
+
+
+//callback is pass a function to another one as an argument
+
 function doStep1(init) {
     return init + 1;
   }
@@ -83,5 +88,25 @@ function aValueForYour(){
 };
 
 value(aValueForYour);
+
+
+//asynchronous way
+
+
+function fetchData(callback) {
+  setTimeout(() => {
+      const data = "Fetched data from server";
+      callback(data); // Execute the callback function with the fetched data
+  }, 2000); // Simulating a 2-second delay
+}
+
+// A callback function to be executed after data is fetched
+function processData(data) {
+  console.log("Processing data:", data);
+}
+
+// Calling the fetchData function and passing the processData callback
+fetchData(processData);
+
   
   
