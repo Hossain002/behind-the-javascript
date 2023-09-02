@@ -37,4 +37,17 @@ promise
 );
 
 
+//try catch way to catch error
+
+try {
+    
+    const division = 20/0;
+    console.log(division, number);
+    
+} catch (error) {
+    console.error(error.massage);
+    
+}
+
+
 
